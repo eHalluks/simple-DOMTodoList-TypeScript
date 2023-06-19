@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+    <div class="header-container">
+        <h1>TodoList</h1>
+        <div class="daily-details">
+            <div>
+                <p>Needs to be done</p>
+                <p id="todosQuantity"></p>
+            </div>
+            <div>
+                <p>Date</p>
+                <p id="dateInHeader">20.04.2023</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div>
+            <h2>Add new task</h2>
+        </div>
+
+        <div>
+
+            <form id="todo-form">
+                <label>
+                    Date:
+                    <input type="date" id="date" tabindex="1">
+                </label>
+                <label>
+                    *Short description (max 50 znaków)
+                    <input type="text" id="short-description" required tabindex="2">
+                </label>
+                <small hidden="hidden" id="shortDescriptionError"></small>
+                <label>
+                    Long description: (max 550 znaków)
+                    <textarea id="long-description" rows="10" tabindex="3" wrap="soft"></textarea>
+                </label>
+                <small hidden="hidden" id="longDescriptionError"></small>
+                <button type="submit" tabindex="4">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    <hr>
+    <div id="todo-list">
+    </div>
+
+    <footer>
+        <a href="https://www.udemy.com/course/learn-typescript/" target="_blank">&reg;Udemy course</a>
+    </footer>
+
+</div>
+<script src="./src/index.js"></script>
+</body>
+</html>
+
